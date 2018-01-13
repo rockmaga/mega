@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=YOUR APPKEY" type="text/javascript" charset="utf-8"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     {# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">#}
+    <link rel="stylesheet" href="{% static '/css/bulma.css' %}">
+  </head>
+  <body>
+  {% block content %}
+  {% endblock %}
+
+  </body>
+</html>

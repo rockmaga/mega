@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="hero is-primary" style="border-bottom: crimson solid 0.3rem;">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        浪里青山
+      </h1>
+      <h2 class="subtitle">
+          Longings.me
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-warnning" style="border-bottom: crimson solid 0.3rem;">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        使用微博账号登陆
+      </h1>
+      <h2 class="subtitle">
+          <wb:login-button type="3,2" onlogin="login" onlogout="logout">登录按钮</wb:login-button>
+
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section>
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-8">
+    <div class="tile">
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child box">
+          Megazine
+        </article>
+        <article class="tile is-child box">
+            Newspaper
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+            Style | 风格
+        </article>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        Longings.me
+      </article>
+    </div>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+      浪里青山
+    </article>
+  </div>
+</div>
+
+</section>
+{% endblock %}
