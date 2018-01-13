@@ -18,3 +18,4 @@ deploy_key_rsa
 
 # datebase:db.sqlite3
 *.sqlite3
+media
