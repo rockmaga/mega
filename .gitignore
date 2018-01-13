@@ -1,3 +1,14 @@
+#django settings
+media
+
+# datebase:db.sqlite3
+*.sqlite3
+
+
+# My configurations:
+db.ini
+deploy_key_rsa
+
 # Windows:
 Thumbs.db
 ehthumbs.db
@@ -11,11 +22,3 @@ Desktop.ini
 *.egg-info
 dist
 build
-
-# My configurations:
-db.ini
-deploy_key_rsa
-
-# datebase:db.sqlite3
-*.sqlite3
-media
