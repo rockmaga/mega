@@ -9,10 +9,6 @@ media
 db.ini
 deploy_key_rsa
 
-# Windows:
-Thumbs.db
-ehthumbs.db
-Desktop.ini
 
 # Python:
 *.py[cod]
@@ -22,3 +18,10 @@ Desktop.ini
 *.egg-info
 dist
 build
+
+
+# Windows:
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
