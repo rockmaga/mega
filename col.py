@@ -8,8 +8,6 @@ from press.models import Press
 from Userx.utils    import UX, CTX
 from .views import  Collect, STAR
 
-
-
 class COL:
     def __init__(self, request, upk, *args, **kwargs):
         self.request = request
@@ -35,14 +33,7 @@ class COL:
         
         return col
 
-
-
-# 首页必须登陆，
-# 肯定只能看到自己的圈内的头条
-# 肯定只能看到自己分栏的信息啊！！！
-# 所以，不可以用之前 的UX玩意了，也不需要upk了
-# 重写！！
-
+    #加条广告！ 恩不好，还是写个广告模块！
 class AD:
     def __init__(self, title, subtitle, content, create_time):
         self.title = title
@@ -53,7 +44,7 @@ class AD:
 
 default_ad = AD('神奇的网站', '我要变成世界第一土壕了', '打败腾讯，打败百度，打败那怕些狗屁网站', '2019')
 
-
+# 重写！！
 @login_required
 def index(request, *args, **kwargs):
     cpk = kwargs.pop('cpk', None)
