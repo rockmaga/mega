@@ -56,8 +56,6 @@ def index(request, *args, **kwargs):
     wps = [ wp for wp in Press.objects.filter(author__in=friends) ]
     wps_PK = [ wp.pk for wp in Press.objects.filter(author__in=friends) ]
 
-   
-
     HD = [wp.content_object for wp in  Score.objects.filter(object_pk__in=wps_PK).order_by(F('score').desc())]
     print(HD, Score.objects.filter(object_pk__in=wps_PK))
 
@@ -70,38 +68,4 @@ def index(request, *args, **kwargs):
         'wps': wps,
     }
     context.update(CTX)
-
-
     return render(request, template_name, context)
-
-
-# @login_required
-# def index(request, upk, *args, **kwargs):
-#     cpk = kwargs.pop('cpk', None)
-#     # col = get_object_or_404(Party, pk=cpk) if cpk else None
-#     # print(cpk, col)
-#     column = COL(request, upk)
-
-#     template_name = 'cs/column.html' if cpk else 'cs/index.html'
-
-#     context = {
-#         'headline': column.headline(),
-#         'cols': column.user.parties(),
-#         'user':column.user.account(),
-#         'wps': column.col()[cpk] if cpk else [],
-#     }
-#     context.update(CTX)
-#     return render(request, template_name, context)
-
-
-# @login_required
-# def col(request, upk, cpk, *args, **kwargs):
-#     column = COL(request, upk)
-
-
-
-# def col(request, cpk, *args, **kwargs):
-#     # 获得Col 下的文章：
-#     # col 即party,对啊，肯定要指定用户的
-#     # 操，回到上面的继续写，
-
